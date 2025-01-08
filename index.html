@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 99vw;
+            height: 95vh;
+            border: 1px solid;
+            display: flex;
+            flex-direction: column;
+            gap : 10px;
+            background-color: lightcoral;
+        }
+        .container>div{
+            width: 100%;
+            border: 1px solid;
+            display: flex;
+            justify-content: space-around;
+            background-color: lightblue;
+        }
+        img {
+            width: 100px;
+        }
+        #btn {
+            height: 30px;
+            width: 150px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: darkslategrey;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click this button</button>
+    <div class="container"></div>
+    <script src="./script.js"></script>
+</body>
+</html>
