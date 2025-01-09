@@ -11,7 +11,7 @@
 let btn = document.getElementById("btn");
 btn.addEventListener("click", async () => {
     try {
-        let response = await fetch("http://localhost:3000/products", {method : "GET"});
+        let response = await fetch("https://fakestoreapi.com/products/", {method : "GET"});
     if (!response.ok) {
         throw new Error(response.statusText);
     } else {
@@ -40,7 +40,7 @@ function displayData(data) {
         }
         button.onclick = async () => {
             try {
-                let getResponse = await fetch("http://localhost:3000/products", {method : "GET"});
+                let getResponse = await fetch("https://fakestoreapi.com/products/", {method : "GET"});
                 if (!getResponse.ok) {
                     throw new Error(getResponse.statusText);
                 } else {
@@ -48,7 +48,7 @@ function displayData(data) {
                     var elementId = data[index]['id'];
                     // console.log(elementId);
                 }
-                let response = await fetch(`http://localhost:3000/products/${elementId}`, 
+                let response = await fetch(`https://fakestoreapi.com/products/${elementId}`, 
                     {method : "DELETE", "contentType" : "application/json" })
                     if (!response.ok) {
                         throw new Error(response.status + " " + response.statusText);
